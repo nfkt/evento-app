@@ -40,10 +40,15 @@ main {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .sidebar {
   background: #83B184;
+  background-image: linear-gradient(315deg, #83B184 0%, #83B184 74%);
   grid-area: sidebar;
   transition: all .5s;
   transform: translateX(-30rem);
@@ -68,13 +73,6 @@ a {
   text-decoration: none;
   font-weight: bold;
   margin: 1rem;
-}
-
-/* main ->container -> chatArea + textBox  */
-.containerMain {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 100%;
 }
 
 /* SIdebar content design */

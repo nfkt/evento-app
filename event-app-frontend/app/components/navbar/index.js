@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faBars, faCalendar, faPowerOff } from '@fortawesome/free-solid-svg-icons'
 import SearchBar from "./search-bar";
 import SizedBox from "../sized-box";

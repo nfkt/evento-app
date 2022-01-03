@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from '../../components/navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { faWindowClose, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 import SizedBox from '../../components/sized-box';
+import EventTile from '../../components/event-tile';
 import './index.css';
 
 
@@ -19,10 +20,18 @@ function Admin() {
                     <Navbar />
                 </nav>
                 <main>
-                    <div className="containerMain" >
+                    <SizedBox height="100px" width="100%" />
+
+                    <EventTile />
+                    <SizedBox height="1rem" />
+                    <EventTile />
+                    <SizedBox height="1rem" />
+                    <EventTile />
+                    <SizedBox height="1rem" />  
+                    <FontAwesomeIcon icon={faAngleDoubleDown} size="3x" />
 
 
-                    </div>
+
                 </main>
                 <div className="sidebar">
                     <FontAwesomeIcon icon={faWindowClose} size="2x" onClick={closeMenu} />
