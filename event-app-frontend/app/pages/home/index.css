@@ -31,13 +31,15 @@ nav {
 main {
 
   grid-area: main;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  overflow-y: hidden;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+main::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .sidebar {

@@ -6,6 +6,7 @@ import UpcomingEvents from '../upcoming-events';
 import SizedBox from '../../components/sized-box';
 import './index.css';
 import CreateEvent from '../../components/create-event';
+import CalenderEvents from '../calender-events';
 
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
     }
     return (<div className="container">
         <nav>
-            <Navbar />
+            <Navbar onCalenderClick = {()=> changeEvent('CALENDER_EVENTS')} />
         </nav>
 
 
@@ -52,6 +53,10 @@ function Home() {
                             <div>
                                 Past Event Page
                             </div>
+                        )
+                    case 'CALENDER_EVENTS':
+                        return(
+                           <CalenderEvents />
                         )
                     default:
                         return (

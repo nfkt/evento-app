@@ -5,7 +5,7 @@ import { faCoffee, faBars, faCalendar, faPowerOff } from '@fortawesome/free-soli
 import SearchBar from "./search-bar";
 import SizedBox from "../sized-box";
 
-function Navbar() {
+function Navbar(props) {
 
     const openMenu = () => {
         document.querySelector(".sidebar").classList.add("open");
@@ -27,7 +27,7 @@ function Navbar() {
 
                 <div className="flexRightItem">
 
-                    <FontAwesomeIcon icon={faCalendar} size="2x" />
+                    <FontAwesomeIcon icon={faCalendar} size="2x" onClick={props.onCalenderClick}/>
                     <SearchBar />
                     <FontAwesomeIcon icon={faPowerOff} size="2x" />
                     <div className="sizedBox" />
