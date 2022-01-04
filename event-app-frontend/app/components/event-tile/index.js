@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faEdit, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
 
-function EventTile(){
+function EventTile(props){
 
 
     return(
         <div className="eventTileBody">
             <div className="eventTitle">
             <SizedBox width="1rem" />
-                Event title
+                EVENT TITLE
                 </div>
             <SizedBox width="40vh" height="10vh" />
             <div className="eventOp">
