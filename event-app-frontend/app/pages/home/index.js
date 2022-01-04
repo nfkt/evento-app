@@ -39,7 +39,7 @@ function Home() {
                                     <CreateEvent />
                                     <SizedBox width="2vh" />
                                 </div>
-                                <UpcomingEvents />
+                                <UpcomingEvents SetEvent={()=> changeEvent('VIEW_EVENT')}/>
                             </div>
                         )
                     case 'CANCELLED_EVENT':
@@ -58,6 +58,10 @@ function Home() {
                         return(
                            <CalenderEvents />
                         )
+                    case 'VIEW_EVENT':
+                    return(
+                        <div>View Event Page</div>
+                    )
                     default:
                         return (
                             <UpcomingEvents />

@@ -4,14 +4,15 @@ import EventTile from "../../components/event-tile";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
-function UpcomingEvents(){
+
+function UpcomingEvents(props){
 
 
 
     return(
         <div>
         <SizedBox height="100px" width="100%" />
-        <EventTile />
+        <EventTile Click={props.SetEvent}/>
         <SizedBox height="1rem" />
         <EventTile />
         <SizedBox height="1rem" />

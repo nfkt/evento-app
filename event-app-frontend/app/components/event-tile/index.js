@@ -8,7 +8,7 @@ function EventTile(props){
 
 
     return(
-        <div className="eventTileBody">
+        <div className="eventTileBody" onClick={props.Click}>
             <div className="eventTitle">
             <SizedBox width="1rem" />
                 EVENT TITLE
