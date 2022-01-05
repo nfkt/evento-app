@@ -24,7 +24,7 @@ const events = [{
 function CalenderEvents() {
     return (
         <Calendar
-            events={events}
+            events={events} 
         />
     );
 
