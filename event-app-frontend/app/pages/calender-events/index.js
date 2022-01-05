@@ -5,8 +5,8 @@ const events = [{
     id: 1,
     color: '#fd3153',
     from: '2022-01-01T18:00:00+00:00',
-    to: '2022-05-05T19:00:00+00:00',
-    title: 'This is an event'
+    to: '2022-01-05T19:00:00+00:00',
+    title: 'React Learning'
 }, {
     id: 2,
     color: '#1ccb9e',

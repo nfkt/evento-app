@@ -36,6 +36,19 @@ function ViewEvents() {
 
                 </div>
 
+                <div className="event-participants-list-container">
+                  
+                    <div className="event-participant-list">
+                    <SizedBox width="60vh" />
+                        Participant list
+                        </div>
+                   
+                    
+
+                  
+
+                </div>
+
 
             </div>
 
