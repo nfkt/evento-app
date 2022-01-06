@@ -102,17 +102,21 @@
         "invitee"
         "participants"
         "participantsList";
+        overflow-x: hidden;
     }
     .event-invitees {
         /* background-color: rgba(131, 177, 132, 0.4); */
         
         justify-content: center;
+        
        
       }
       .event-participants {
        
         justify-content: center;
+
       }
+     
 
       .event-container-width {
         width: 100%;
@@ -120,6 +124,19 @@
       }
         
       
+
+  }
+
+  @media only screen and (max-width: 500px) {
+
+    .event-invitees {
+      /* background-color: rgba(131, 177, 132, 0.4); */
+      
+      justify-content: left;
+      
+     
+    }
+
 
   }
   

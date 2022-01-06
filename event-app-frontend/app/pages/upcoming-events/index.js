@@ -4,7 +4,7 @@ import EventTile from "../../components/event-tile";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import CreateEvent from "../../components/create-event";
-import { Outlet, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 function UpcomingEvents() {
