@@ -11,7 +11,7 @@ function SearchBar() {
         <div className="searchBar">
             <input type="text" placeholder="Search by date" className="searchBoxInput"/>
             <SizedBox width="0.5rem" />
-            <FontAwesomeIcon icon={faSearch} size="2x"/>
+            <FontAwesomeIcon icon={faSearch} size="2x" className="searchIcon" color="#91A4B7"/>
 
         </div>
         

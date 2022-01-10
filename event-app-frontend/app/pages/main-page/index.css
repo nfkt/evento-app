@@ -5,8 +5,8 @@ body {
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 0.4fr 0.2fr 1fr 1fr;
-  grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+  grid-template-columns: 1fr 6fr 6fr 6fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.3fr;
   grid-template-areas:
     "nav nav nav nav"
     "sidebar main main main"
@@ -18,11 +18,12 @@ body {
   font-size: 12px;
   color: #004d40;
   text-align: center;
+  transition: grid-template-columns 2s;
 }
 
 nav {
-  background-color: #83b184;
-  background-image: linear-gradient(315deg, #83b184 0%, #83b184 74%);
+  background-color: #0D1829;
+  /* background-image: linear-gradient(315deg, #83b184 0%, #83b184 74%); */
   grid-area: nav;
   padding-top: 20px;
 }
@@ -42,15 +43,23 @@ main::-webkit-scrollbar {
 }
 
 .sidebar {
-  background: #83b184;
-  background-image: linear-gradient(315deg, #83b184 0%, #83b184 74%);
+  width: 100%;
+  background-color: whitesmoke;
+  /* background-image: linear-gradient(315deg, #83b184 0%, #83b184 74%); */
   grid-area: sidebar;
   transition: all 0.5s;
-  transform: translateX(-30rem);
+  /* transform: translateX(-30rem); */
+  /* overflow-x:visible; */
 }
 .sidebar.open {
-  transform: translateX(0);
+  /* transform: translateX(0); */
+  width: 150%;
 }
+
+.sideBarIcons{
+  padding-top: 48px;
+}
+
 
 a {
   text-align: center;
@@ -62,10 +71,11 @@ a {
 }
 
 /* SIdebar content design */
+
 li {
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding-top: 8px;
   text-align: left;
   font-size: large;
 }
@@ -73,6 +83,8 @@ li {
 li:hover {
   background-color: lightgreen;
 }
+
+
 
 /* Create event align */
 .alignButtonEnd {
@@ -102,7 +114,7 @@ li:hover {
 }
 
   .sidebar.open {
-    transform: translateY(0);
+    width: inherit;
     
   }
   li {

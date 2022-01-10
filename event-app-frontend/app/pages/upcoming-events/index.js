@@ -20,7 +20,6 @@ function UpcomingEvents() {
             <SizedBox height="2vh" />
 
             <div className="alignButtonEnd">
-                <CreateEvent />
                 <SizedBox width="2vh" />
             </div>
             <SizedBox height="100px" width="100%" />

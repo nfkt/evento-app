@@ -13,4 +13,12 @@
 	width: 275px;
 	padding-left:10px;
 	padding-right:10px;
+	text-align: center;
+}
+
+.searchIcon{
+	position: absolute;
+	/* margin-left: 270px; */
+	margin-left: 4px;
+	margin-top: 3px;
 }
