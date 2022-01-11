@@ -6,8 +6,9 @@ import MainPage from "../pages/main-page";
 import Login from "../pages/login";
 import PastEvents from "../pages/past-events";
 import UpcomingEvents from "../pages/upcoming-events";
+import CreateEventForm from "../pages/create-event-form";
+import EditEventForm from "../pages/edit-event-form";
 import Home from "../pages/home";
-
 
 function Paths() {
 
@@ -26,6 +27,8 @@ function Paths() {
                     <Route path="past-events" element={<PastEvents />} />
                     <Route path="calender-events" element={<CalenderEvents />} />
                     <Route path="view-event/:id/" element={<ViewEvents />} />
+                    <Route path="create-event/" element={<CreateEventForm />} />
+                    <Route path="edit-event/:id" element={<EditEventForm />} />
 
                 </Route>
 

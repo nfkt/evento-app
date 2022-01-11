@@ -50,7 +50,7 @@ function MainPage() {
 
     return (<div className="container">
         <nav>
-            <Navbar openMenu={clickMenu} />
+            <Navbar openMenu={clickMenu} onClick={()=> navigate("create-event")}/>
         </nav>
 
 

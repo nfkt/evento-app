@@ -91,6 +91,7 @@ function EventsTable(props) {
                                         :
                                         <td>
                                             <FontAwesomeIcon icon={faUserPlus} />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <FontAwesomeIcon icon={faEdit} />
                                         </td>
                                     :
