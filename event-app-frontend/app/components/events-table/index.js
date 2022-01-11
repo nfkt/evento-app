@@ -1,28 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './index.css';
 
 function EventsTable(props) {
 
-    const [tHeader, setTHeader] = useState({});
-    const [tRow, setTrow]=useState([]);
+    const [tHeader, setTHeader] = useState(['Event Title', 'Status', 'Start Date', 'Actions']);
+    const [tRow, setTrow] = useState([{ 'Event Title': "React", 'Status': "Active" }, { 'Event Title': "Angular", 'Status': "Inactive" }]);
+
+
+    useEffect(() => {
+
+        
+    })
 
 
     return (
         <center>
             <table id="events">
                 <tr>
-                    <th>Event Title</th>
-                    <th>Status</th>
-                    <th>Start Date</th>
-                    <th>Actions</th>
+                    {tHeader.map((item, i) =>
+                        <th>{tHeader[i]}</th>
+                    )}
+                 
                 </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                </tr>
-                
+                {tRow.map((item, i)=>
+                    <tr>
+                        <td>{item["Event Title"]}</td>
+                        <td>{item["Status"]}</td>
+                        <td>Germany</td>
+                        <td>Germany</td>
+                    </tr>
+                )}
+
+
             </table>
         </center>
 
