@@ -24,6 +24,7 @@ body {
 nav {
   background-color: #0D1829;
   /* background-image: linear-gradient(315deg, #83b184 0%, #83b184 74%); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   grid-area: nav;
   padding-top: 20px;
 }
@@ -53,13 +54,22 @@ main::-webkit-scrollbar {
 }
 .sidebar.open {
   /* transform: translateX(0); */
-  width: 150%;
+  width: 200%;
+  z-index: 1;
 }
 
 .sideBarIcons{
   padding-top: 48px;
 }
 
+.sideBarIcons .sideBarText{
+  visibility: hidden;
+  z-index: 1;
+}
+
+.sideBarIcons:hover .sideBarText{
+  visibility: visible;
+}
 
 a {
   text-align: center;
@@ -72,15 +82,19 @@ a {
 
 /* SIdebar content design */
 
-li {
+.liClick {
   list-style-type: none;
-  margin: 0;
+  margin: 8px;
   padding-top: 8px;
   text-align: left;
-  font-size: large;
+  font-size: 16px;
+  display: flex;
+  justify-content: start;
+  gap: .8rem;
+
 }
 
-li:hover {
+.liClick:hover {
   background-color: lightgreen;
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faBars, faCalendar, faPowerOff } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faBars, faCalendar, faPowerOff, faImage } from '@fortawesome/free-solid-svg-icons'
 import SearchBar from "./search-bar";
 import SizedBox from "../sized-box";
 import CreateEvent from "../create-event";
@@ -27,8 +27,10 @@ function Navbar(props) {
 
                     {/* <FontAwesomeIcon icon={faCalendar} size="2x" onClick={props.onCalenderClick}/> */}
                     <SearchBar />
+                    <SizedBox width="8vh" />
                     <CreateEvent />
-                    <FontAwesomeIcon icon={faPowerOff} size="2x" />
+                    <SizedBox width="8vh" />
+                    <FontAwesomeIcon icon={faImage} size="2x" color="#91A4B7"/>
                     
                     <div className="sizedBox" />
 
