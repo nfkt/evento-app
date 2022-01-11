@@ -18,7 +18,7 @@ function UpcomingEvents() {
             <SizedBox height="2vh" />
 
             
-            <EventsTable />
+            <EventsTable titles={['Event-Titles', 'Status', 'Start Date', 'Actions']} onClick={navigateToEvent}/>
         </div>
 
     )
