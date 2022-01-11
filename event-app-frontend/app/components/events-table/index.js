@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
+import { faAd, faAddressCard, faUserPlus, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 function EventsTable(props) {
 
@@ -28,42 +31,41 @@ function EventsTable(props) {
             'End Date': "20/12/2021"
         }
     ]);
-const checkPage = (page,tHeader, tRow)=>{
-    switch (page){
-        case 'UPCOMING_EVENT':
-            console.log("UPCOMING EVENT");
-            // setTHeader(props.titles);
-            tHeader = tHeader.filter((title, i)=>{return title !== 'End Date'});
-            setTHeader(tHeader);
-            tRow = tRow.filter((content, i)=>{ return delete content["End Date"]})
-            setTrow(tRow);
-            break;
+    const checkPage = (page, tHeader, tRow) => {
+        switch (page) {
+            case 'UPCOMING_EVENT':
 
-        case 'COMPLETED_EVENT':
-            console.log("COMPLETED EVENT");
-            tHeader = tHeader.filter((title, i)=>{return title !== 'Actions'});
-            setTHeader(tHeader);
-            tRow = tRow.filter((content, i)=>{ return delete content["Actions"]})
-            setTrow(tRow);
-            break;
-            
-        case 'CANCELLED_EVENT':
-            console.log("CAMCELLED EVENT");
-            break;
-        default:
-            console.log("Nothing Selected")
+                tHeader = tHeader.filter((title, i) => { return title !== 'End Date' });
+                setTHeader(tHeader);
+                tRow = tRow.filter((content, i) => { return delete content["End Date"] })
+                setTrow(tRow);
+                break;
+
+            case 'COMPLETED_EVENT':
+
+                tHeader = tHeader.filter((title, i) => { return title !== 'Actions' });
+                setTHeader(tHeader);
+                tRow = tRow.filter((content, i) => { return delete content["Actions"] })
+                setTrow(tRow);
+                break;
+
+            case 'CANCELLED_EVENT':
+                console.log("CAMCELLED EVENT");
+                break;
+            default:
+                console.log("Nothing Selected")
+        }
+
+
     }
-
-
-}
 
     useEffect(() => {
         if (props.titles)
             setTHeader(props.titles);
-            checkPage(props.eventType, props.titles, tRow);
+        checkPage(props.eventType, props.titles, tRow);
         if (props.content)
             setTrow(props.content);
-        
+
 
     }, [props.titles, props.content])
 
@@ -83,7 +85,24 @@ const checkPage = (page,tHeader, tRow)=>{
                     {tRow.map((item, i) =>
                         <tr key={i}>
                             {Object.entries(item).map((itemTitle, key) =>
-                                <td key={key} onClick={props.onClick}>{itemTitle[1]}</td>
+                                itemTitle[0] !== 'Status' ?
+                                    itemTitle[0] !== 'Actions' ?
+                                        <td key={key} onClick={props.onClick}>{itemTitle[1]}</td>
+                                        :
+                                        <td>
+                                            <FontAwesomeIcon icon={faUserPlus} />
+                                            <FontAwesomeIcon icon={faEdit} />
+                                        </td>
+                                    :
+                                    <td>
+                                        <select className="box">
+                                            <option value="" selected disabled hidden>{itemTitle[1]}</option>
+                                            <option value="Active">Active</option>
+                                            <option value="In Progress">In Progress</option>
+                                        </select>
+                                    </td>
+
+
                             )}
 
                         </tr>

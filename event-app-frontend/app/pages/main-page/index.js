@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faSearch, faCalendar, faFastForward, faCheckCircle, faStopCircle } from '@fortawesome/free-solid-svg-icons';
-import UpcomingEvents from '../upcoming-events';
+import {faCalendar, faFastForward, faCheckCircle, faStopCircle } from '@fortawesome/free-solid-svg-icons';
 import SizedBox from '../../components/sized-box';
 import './index.css';
-import CreateEvent from '../../components/create-event';
-import SideBar from '../../components/sidebar';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 
@@ -26,6 +23,7 @@ function MainPage() {
         })
     }, [sideCheck]);
 
+    // This function is not required anymore
     const navbarCheck = () => {
         if (document.querySelector('.sidebar').classList.contains('open')) {
             setSideCheck(true);
