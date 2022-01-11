@@ -3,6 +3,7 @@ import SizedBox from "../../components/sized-box";
 import './index.css';
 import { useNavigate, Link } from "react-router-dom";
 import EventsTable from "../../components/events-table";
+import services from "../../services";
 
 
 function UpcomingEvents() {
@@ -18,7 +19,7 @@ function UpcomingEvents() {
             <SizedBox height="2vh" />
 
             
-            <EventsTable titles={['Event-Titles', 'Status', 'Start Date', 'Actions']} onClick={navigateToEvent}/>
+            <EventsTable titles={['Event-Titles', 'Status', 'Start Date', 'Actions', 'End Date']} onClick={navigateToEvent} eventType={services.eventType.UPCOMING_EVENT}/>
         </div>
 
     )
