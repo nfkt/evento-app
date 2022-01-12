@@ -2,7 +2,7 @@
   max-width: 80%;
   padding: 10px 20px;
   background: #f4f7f8;
-  margin: 10px auto;
+  margin: 40px auto;
   padding: 20px;
   filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
@@ -30,7 +30,6 @@
 .form-style-5 textarea,
 .form-style-5 select {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 4px;
   font-size: 15px;
@@ -41,10 +40,10 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background-color: #e8eeef;
+  background-color: white;
   color: #8a97a0;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
 .form-style-5 input[type="text"] {
@@ -111,6 +110,10 @@
 
 textarea {
   resize: none;
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
 }
 
 .formTable {
@@ -130,4 +133,20 @@ textarea {
   text-align: left;
   width: 40%;
   gap: 8px;
+}
+
+.formRowBtn{
+    display: flex; 
+    gap: 8px; 
+    justify-content: center;
+}
+
+#createBtn{
+    background-color: rgba(36, 192, 36, 0.76);
+    border-radius: 8px;
+}
+
+#cancelBtn{
+    background-color: rgb(160, 30, 30);
+    border-radius: 8px;
 }

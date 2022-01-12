@@ -65,8 +65,11 @@ function EventForm() {
                     </div>
                 </fieldset>
 
-                <div className="formRow">
-                    <input type="submit" value="Apply" />
+                <div className="formRowBtn">
+
+                    <input type="submit" value="Create" id="createBtn" />
+                    <input type="submit" value="Cancel" id="cancelBtn" />
+
                 </div>
 
             </form>
