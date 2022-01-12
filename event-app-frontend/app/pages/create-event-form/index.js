@@ -1,13 +1,13 @@
 import React from "react";
-
-
+import EventForm from "../../components/event-form";
+import './index.css'
 
 function CreateEventForm(){
 
 
     return(
-        <div>
-            This is create event form
+        <div className="createEventForm">
+            <EventForm />
         </div>
     )
 }

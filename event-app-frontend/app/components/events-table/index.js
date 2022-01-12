@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
-import { faAd, faAddressCard, faUserPlus, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus, faEdit } from "@fortawesome/free-solid-svg-icons";
+import services from "../../services";
 
 function EventsTable(props) {
 
@@ -33,7 +33,7 @@ function EventsTable(props) {
     ]);
     const checkPage = (page, tHeader, tRow) => {
         switch (page) {
-            case 'UPCOMING_EVENT':
+            case services.eventType.UPCOMING_EVENT:
 
                 tHeader = tHeader.filter((title, i) => { return title !== 'End Date' });
                 setTHeader(tHeader);
@@ -41,7 +41,7 @@ function EventsTable(props) {
                 setTrow(tRow);
                 break;
 
-            case 'COMPLETED_EVENT':
+            case services.eventType.COMPLETED_EVENT:
 
                 tHeader = tHeader.filter((title, i) => { return title !== 'Actions' });
                 setTHeader(tHeader);
@@ -49,7 +49,7 @@ function EventsTable(props) {
                 setTrow(tRow);
                 break;
 
-            case 'CANCELLED_EVENT':
+            case services.eventType.CANCELED_EVENT:
                 console.log("CAMCELLED EVENT");
                 break;
             default:
@@ -78,9 +78,7 @@ function EventsTable(props) {
                         {tHeader.map((item, i) =>
 
                             <th key={i}>{tHeader[i]}</th>
-
                         )}
-
                     </tr>
                     {tRow.map((item, i) =>
                         <tr key={i}>
@@ -102,16 +100,10 @@ function EventsTable(props) {
                                             <option value="In Progress">In Progress</option>
                                         </select>
                                     </td>
-
-
                             )}
-
                         </tr>
                     )}
                 </tbody>
-
-
-
             </table>
         </center>
 

@@ -1,5 +1,6 @@
 import Calendar from 'react-awesome-calendar';
 import React from 'react';
+import './index.css'
 
 const events = [{
     id: 1,
@@ -23,9 +24,11 @@ const events = [{
 
 function CalenderEvents() {
     return (
-        <Calendar
-            events={events} 
-        />
+        <div className="calenderSize">
+            <Calendar
+                events={events}
+            />
+        </div>
     );
 
 };
