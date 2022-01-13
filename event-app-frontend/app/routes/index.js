@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CalenderEvents from "../pages/calender-events";
 import ViewEvents from "../pages/event-details";
-import MainPage from "../pages/main-page";
+import MainPage from "../pages";
 import Login from "../pages/login";
 import PastEvents from "../pages/past-events";
 import UpcomingEvents from "../pages/upcoming-events";
